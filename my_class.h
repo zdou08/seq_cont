@@ -8,30 +8,28 @@
 #include <forward_list>
 #include <list>
 
+#include "my_array.h"
+#include "my_vector.h"
+
 using namespace std;
 
-class seqContainer {
+class seqContainer: public arrayClass, public vectorClass 
+{
 
 public:
 
 seqContainer(int numUp);
 
-void setArray(int arNum);
-array <int,6> getArray();
-
-//void setVector(int vecNum);
 //void setDeque(int decNum);
 //void setFwd(int fwdNum);
 //void setList(int listNum);
 
-//getVector();
 //getDeque();
 //getFwd();
 //getList();
 
 private:
 
-vector<int> vec;
 deque<int> deq;
 forward_list<int> forList;
 list<int> comList;

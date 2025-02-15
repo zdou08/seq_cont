@@ -1,45 +1,45 @@
-#include "my_vector.h"
+#include "my_deque.h"
 
-vectorClass::vectorClass(){
-    cout << "Vector Constructor" << endl;
+dequeClass::dequeClass(){
+    cout << "Deque Constructor" << endl;
 }
 
-void vectorClass::setVector(int position, int addNum) {
-    vecSize = vec.size();
-    if (position < vecSize) {
+void dequeClass::setDeque(int position, int addNum) {
+    deqSize = deq.size();
+    if (position < deqSize) {
         cout << "Not empty" << endl;
-        vec.at(position) = addNum;
-        vecSize = vec.size();
-        cout << "size of vector: " << vec.size() << endl;
-    } else if (position == vecSize) {
-        vec.push_back(addNum);
-        vecSize = vec.size();
-        cout << "size of vector: " << vec.size() << endl;
+        deq.at(position) = addNum;
+        deqSize = deq.size();
+        cout << "size of deque: " << deq.size() << endl;
+    } else if (position == deqSize) {
+        deq.push_back(addNum);
+        deqSize = deq.size();
+        cout << "size of deque: " << deq.size() << endl;
     } else {
-        cout << "Position does NOT exist in Vector." << endl;
-        cout << "Max Position: " << vec.size() << endl;
+        cout << "Position does NOT exist in Deque." << endl;
+        cout << "Max Position: " << deq.size() << endl;
     }
 }
 
-vector<int> vectorClass::getVector() {
-    return vec;
+deque<int> dequeClass::getDeque() {
+    return deq;
 }
 
-void vectorClass::clearVecPos(int position) {
-    vec[position] = 0;
-    vecSize = vec.size();
-    if (position < vecSize) {
+void dequeClass::clearDeqPos(int position) {
+    deq[position] = 0;
+    deqSize = deq.size();
+    if (position < deqSize) {
         cout << "Not empty" << endl;
-        vec[position] = 0;
-        cout << "size of vector: " << vec.max_size() << endl;
+        deq[position] = 0;
+        cout << "size of deque: " << deq.max_size() << endl;
     } else {
-        cout << "Position does NOT exist in Vector." << endl;
-        cout << "Max Position: " << vec.size() << endl;
+        cout << "Position does NOT exist in Deque." << endl;
+        cout << "Max Position: " << deq.size() << endl;
     }
 
 }
 
-void vectorClass::clearVecAll() {
-    vec.clear();
-    vec.push_back(0);
+void dequeClass::clearDeqAll() {
+    deq.clear();
+    deq.push_back(0);
 }

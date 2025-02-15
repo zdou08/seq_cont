@@ -1,26 +1,26 @@
-#ifndef MY_VECTOR_H
-#define MY_VECTOR_H
+#ifndef MY_DEQUE_H
+#define MY_DEQUE_H
 
 #include <iostream>
-#include <vector>
+#include <deque>
 #include <cstring>
 
 using namespace std;
 
-class vectorClass {
+class dequeClass {
 public:
 
-    vectorClass();
+    dequeClass();
 
-    void setVector (int position, int addNum);
-    vector<int> getVector();
+    void setDeque (int position, int addNum);
+    deque<int> getDeque();
 
-    void clearVecPos(int position);
-    void clearVecAll();
+    void clearDeqPos(int position);
+    void clearDeqAll();
 
 private:
-    int vecSize = 0;
-    vector<int> vec;
+    int deqSize = 0;
+    deque<int> deq;
 
 };
 
